@@ -1,18 +1,20 @@
-function countLetters(sentenceIn) {
+function countLetters(input) {
 
-   var sentenceOut = sentenceIn.toLowerCase().split(" ").join("");
+   var output = input.toLowerCase().split(" ").join("");
 
-   var letterInstances = { };
+   var letters = { };
 
-   for (var i = 0; i < sentenceOut.length; i++) {
-       if (letterInstances[sentenceOut[i]] === undefined ){
-           letterInstances[sentenceOut[i]] = 1;
+   for (var i = 0; i < output.length; i++) {
+       if (letters[output[i]] === undefined ){
+           letters[output[i]] = 1;
        } else {
-           letterInstances[sentenceOut[i]] += 1;
+           letters[output[i]] += 1;
        }
    }
-   return letterInstances;
+   return letters;
 }
+
+// Test
 
 console.log(countLetters("This is a sentence"));
 console.log(countLetters("lighthouse in the house"));
